@@ -1,23 +1,6 @@
 #!/usr/bin/python3
 # 101-nqueens.py
-"""Solves the N-queens puzzle.
 
-Determines all possible solutions to placing N
-N non-attacking queens on an NxN chessboard.
-
-Example:
-    $ ./101-nqueens.py N
-
-N must be an integer greater than or equal to 4.
-
-Attributes:
-    board (list): A list of lists representing the chessboard.
-    solutions (list): A list of lists containing solutions.
-
-Solutions are represented in the format [[r, c], [r, c], [r, c], [r, c]]
-where `r` and `c` represent the row and column, respectively, where a
-queen must be placed on the chessboard.
-"""
 import sys
 
 
@@ -129,12 +112,15 @@ def recursive_solve(board, row, queens, solutions):
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
+		print()
         sys.exit(1)
     if sys.argv[1].isdigit() is False:
         print("N must be a number")
+		print()
         sys.exit(1)
     if int(sys.argv[1]) < 4:
         print("N must be at least 4")
+		print()
         sys.exit(1)
 
     board = init_board(int(sys.argv[1]))
