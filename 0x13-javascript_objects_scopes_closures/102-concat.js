@@ -8,4 +8,3 @@ const contentB = fs.readFileSync(process.argv[3], 'utf8', function (err, result)
 const contentC = contentA.concat(contentB);
 
 fs.writeFile(process.argv[4], contentC, 'utf8', function (err, result) { if (err) console.log('error', err); });
-
