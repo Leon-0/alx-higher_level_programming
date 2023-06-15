@@ -5,5 +5,5 @@ const firstArgument = args[0];
 if (firstArgument) {
   console.log(firstArgument);
 } else {
-  console.log("No argument");
+  console.log('No argument');
 }
