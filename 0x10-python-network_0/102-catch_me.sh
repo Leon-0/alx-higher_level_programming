@@ -6,4 +6,4 @@ response=$(curl -s -X PUT -H "Referer: 0.0.0.0:5000/catch_me" -w "%{redirect_url
 redirect_url=$(echo "$response" | sed 's/.*href="\([^"]*\)".*/\1/')
 
 # Make a GET request to the redirected URL
-curl "$redirect_url"
+curl -o /dev/tty "$redirect_url"
